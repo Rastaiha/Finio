@@ -32,9 +32,11 @@ const LoginPage: FC<LoginPagePropsType> = ({
     username: '',
   });
 
-  if (token) {
-    navigate('/japan/');
-  }
+  useEffect(() => {
+    if (token) {
+      navigate('/japan/');
+    }
+  }, [token])
 
   const putData = (event) => {
     setData({

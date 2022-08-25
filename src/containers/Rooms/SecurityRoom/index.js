@@ -9,7 +9,7 @@ import useImage from 'use-image';
 import MessageSeries from './MessageSeries';
 import URLImage from '../../../components/Konva/URLImage';
 import Layout from '../../Layout';
-import ItemImage from '../ItemImage';
+import ItemImage from '../../../pages/Rooms/Item';
 import SubmitAnswer from '../../../components/Dialog/SubmitAnswer';
 import ImageDialog from '../../../components/Dialog/Image';
 

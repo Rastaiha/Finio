@@ -3,11 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 
 import Login from '../pages/Login'
-import Egypt from '../containers/Rooms/Egypt';
-import Exchange from '../containers/Rooms/Exchange';
-import Greece from '../containers/Rooms/Greece';
-import Iran from '../containers/Rooms/Iran';
-import Japan from '../containers/Rooms/Japan';
+import Japan from '../pages/Rooms/Japan';
 
 const Root = () => {
   return (

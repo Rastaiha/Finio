@@ -12,7 +12,7 @@ import {
   getAllFamousPersonsAction,
 } from '../../redux/slices/game';
 import Layout from '../Layout';
-import ItemImage from './ItemImage';
+import ItemImage from '../../pages/Rooms/Item';
 
 const useStyles = makeStyles(() => ({
   fullHeight: {

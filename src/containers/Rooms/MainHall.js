@@ -8,7 +8,7 @@ import useImage from 'use-image';
 import GetProblem from '../../components/Dialog/GetProblem'
 import URLImage from '../../components/Konva/URLImage';
 import Layout from '../Layout';
-import ItemImage from './ItemImage';
+import ItemImage from '../../pages/Rooms/Item';
 
 const useStyles = makeStyles(() => ({
   fullHeight: {

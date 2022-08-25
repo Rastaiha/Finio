@@ -7,7 +7,7 @@ import useImage from 'use-image';
 
 import URLImage from '../../components/Konva/URLImage';
 import Layout from '../Layout';
-import ItemImage from './ItemImage';
+import ItemImage from '../../pages/Rooms/Item';
 import GetProblem from '../../components/Dialog/GetProblem'
 
 const useStyles = makeStyles(() => ({
