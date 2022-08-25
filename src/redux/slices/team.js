@@ -62,6 +62,7 @@ const initialState = {
   openChatRoom: false,
 };
 
+
 const isFetching = (state) => {
   state.isFetching = true;
 };
@@ -127,4 +128,4 @@ export const {
   changeOpenChatRoom: changeOpenChatRoomAction
 } = accountSlice.actions;
 
-export const { reducer: accountReducer } = accountSlice;
+export const { reducer: teamReducer } = ChatRoom;

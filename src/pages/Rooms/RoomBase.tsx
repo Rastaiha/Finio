@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
+import {
+  Box,
+} from '@mui/material';
 import { Layer, Stage } from 'react-konva';
 import useImage from 'use-image';
 import URLImage from '../../components/Konva/URLImage';
-import Layout from '../../containers/Layout';
 import Item from './Item';
 import { ItemType } from '../../types/global';
 
@@ -15,9 +17,22 @@ const Room: FC<RoomPropsType> = ({ backgroundImageSrc, items }) => {
   const [backgroundImage] = useImage(process.env.PUBLIC_URL + backgroundImageSrc);
   const scaleY = window.innerHeight / backgroundImage?.height;
 
-
   return (
-    <Layout backgroundImage={backgroundImageSrc}>
+    <>
+      <Box sx={{
+        transform: 'scale(1.1)',
+        height: '100vh',
+        width: '100%',
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        background: `url(${process.env.PUBLIC_URL + backgroundImageSrc}) no-repeat center center fixed`,
+        opacity: '0.5',
+        backgroundSize: 'cover',
+        zIndex: '-1',
+        animation: 'show-back 0.8s 0.3s both',
+        filter: 'blur(3px)',
+      }} />
       <Stage
         width={Math.min(backgroundImage?.width * scaleY, window.innerWidth)}
         height={window.innerHeight}>
@@ -46,7 +61,7 @@ const Room: FC<RoomPropsType> = ({ backgroundImageSrc, items }) => {
           ))}
         </Layer>
       </Stage>
-    </Layout>
+    </>
   );
 };
 

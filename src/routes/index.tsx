@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 
 import Login from '../pages/Login'
-import Japan from '../pages/Rooms/Japan';
+import Room from '../pages/Room';
 
 const Root = () => {
   return (
@@ -12,7 +12,7 @@ const Root = () => {
       <Route path="/" element={<Login />} />
 
       <Route path="/" element={<PrivateRoute />}>
-        <Route path="/japan/" element={<Japan />} />
+        <Route path="/room/:roomName/" element={<Room />} />
       </Route>
       <Route path="*" element={<Login />} />
     </Routes>
