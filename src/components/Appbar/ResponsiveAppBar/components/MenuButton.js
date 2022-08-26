@@ -30,7 +30,7 @@ const Index = ({ getPlayer }) => {
         setOpenDialog(!openDialog);
         getPlayer();
       }}
-      size="large">
+      size='small'>
       <img
         src={process.env.PUBLIC_URL + '/logo.png'}
         alt="logo"
