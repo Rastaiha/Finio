@@ -1,17 +1,12 @@
 import {
   Button,
-  ButtonGroup,
   Dialog,
   DialogActions,
   DialogContent,
   DialogTitle,
   Grow,
-  IconButton,
+  Typography,
 } from '@mui/material';
-import {
-  CloudUpload as CloudUploadIcon,
-} from '@mui/icons-material';
-import ClearIcon from '@mui/icons-material/Clear';
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import TinyPreview from '../tiny_editor/react_tiny/Preview';
@@ -25,14 +20,13 @@ import SubmitAnswerButton from '../atoms/SubmitAnswerButton';
 function ProblemDialog({
   openProblemDialog,
   problem,
-  answer,
-  submit,
+  message,
   problemGroupId,
 
+  submit,
   setProblemDialog,
   getProblemFromGroup,
 }) {
-  const [answerFile, setAnswerFile] = useState(null);
 
   useEffect(() => {
     if (problemGroupId) {
@@ -41,7 +35,8 @@ function ProblemDialog({
   }, [problemGroupId])
 
   console.log(problem);
-  console.log(answer);
+  console.log(submit);
+  console.log(message)
 
   return (
     <Dialog maxWidth="xs" TransitionComponent={Grow} open={openProblemDialog} onClose={setProblemDialog}>
@@ -49,17 +44,28 @@ function ProblemDialog({
         {problem?.title}
       </DialogTitle>
       <DialogContent>
-        <TinyPreview
-          content={problem?.text}
-          frameProps={{
-            frameBorder: '0',
-            scrolling: 'no',
-            width: '100%',
-          }}
-        />
+        {message ?
+          <Typography variant='h5'>
+            {message}
+          </Typography>
+          :
+          <TinyPreview
+            content={problem?.text}
+            frameProps={{
+              frameBorder: '0',
+              scrolling: 'no',
+              width: '100%',
+            }}
+          />
+        }
       </DialogContent>
       <DialogActions>
-        <SubmitAnswerButton submitId={submit?.id} problemId={problem?.id} />
+        {message ?
+          <Button variant='outlined' onClick={setProblemDialog}>
+            {'متوجه شدم'}
+          </Button>
+          : <SubmitAnswerButton submitId={submit?.id} problemId={problem?.id} />
+        }
       </DialogActions>
     </Dialog >
   );
@@ -71,6 +77,7 @@ const mapStateToProps = (state) => ({
   problem: state.problem.problem,
   answer: state.problem.answer,
   submit: state.problem.submit,
+  message: state.problem.message,
 })
 
 export default connect(mapStateToProps, {

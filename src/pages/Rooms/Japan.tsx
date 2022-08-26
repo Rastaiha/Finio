@@ -34,21 +34,30 @@ const Japan = ({
       id: "3",
       x: 710,
       y: 470,
-      onClick: () => { },
+      onClick: () => {
+
+      },
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/japan/dragon.png',
       id: "4",
       x: 240,
       y: 230,
-      onClick: () => { },
+      onClick: () => {
+        setProblemDialog({ problemGroupId: 2 })
+
+      },
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/japan/katana.png',
       id: "5",
       x: 130,
       y: 698,
-      onClick: () => { },
+      onClick: () => {
+
+        setProblemDialog({ problemGroupId: 3 })
+
+      },
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/japan/japan frame.png',

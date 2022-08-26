@@ -21,6 +21,7 @@ import Finio2 from './Rooms/Finio2';
 
 const rooms = {
   'doors': <Doors />,
+  'japan': <Japan />,
   'algorithm': <Algorithm />,
   'data': <Data />,
   'hoosh': <Hoosh />,

@@ -38,14 +38,14 @@ const LoginPage: FC<LoginPagePropsType> = ({
     }
   }, [token])
 
-  const putData = (event) => {
+  const collectData = (event) => {
     setData({
       ...data,
       [event.target.name]: toEnglishNumber(event.target.value),
     });
   };
 
-  const doLogin = () => {
+  const submit = () => {
     const { username, password } = data;
     if (!username || !password) {
       return;
@@ -87,7 +87,7 @@ const LoginPage: FC<LoginPagePropsType> = ({
                     fullWidth
                     onChange={(e) => {
                       if (isNumber(e.target.value)) {
-                        putData(e);
+                        collectData(e);
                       }
                     }}
                     value={data.username}
@@ -102,7 +102,7 @@ const LoginPage: FC<LoginPagePropsType> = ({
                     autoComplete="on"
                     variant="outlined"
                     fullWidth
-                    onChange={putData}
+                    onChange={collectData}
                     label="گذرواژه"
                     name="password"
                     inputProps={{ className: 'ltr-input' }}
@@ -111,20 +111,13 @@ const LoginPage: FC<LoginPagePropsType> = ({
                 </Grid>
                 <Grid container item direction="row" justifyContent="center">
                   <Button
-                    onClick={doLogin}
+                    onClick={submit}
                     variant="contained"
                     color="primary"
                     disabled={isFetching}
                     fullWidth>
                     بزن بریم
                   </Button>
-                </Grid>
-                <Grid item>
-                  <Typography align="center">
-                    {'حساب کاربری نداری؟ از '}
-                    <Link to="/create-account/">{'این‌جا'}</Link>
-                    {' یک حساب برای خودت بساز.'}
-                  </Typography>
                 </Grid>
               </Grid>
             </Grid>

@@ -65,13 +65,14 @@ const accountSlice = createSlice({
     [hasPlayerGotProblemAction.fulfilled.toString()]: isNotFetching,
     [hasPlayerGotProblemAction.rejected.toString()]: isNotFetching,
 
-
+    
     [getProblemFromGroupAction.pending.toString()]: isFetching,
     [getProblemFromGroupAction.fulfilled.toString()]: (state, { payload: { response } }) => {
       console.log(response)
       state.problem = response.problem;
       state.answer = response.answer;
       state.submit = response.submit;
+      state.message = response.message;
       state.isFetching = false;
     },
     [getProblemFromGroupAction.rejected.toString()]: isNotFetching,
