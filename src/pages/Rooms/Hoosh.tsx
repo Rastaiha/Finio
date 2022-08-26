@@ -1,59 +1,61 @@
 import React, { FC } from 'react';
 import { ItemType } from '../../types/global';
-import RoomBase from './RoomBase';
+import RoomBase from './RoomTemplate';
 
 const Hoosh = () => {
-  const backgroundImageSrc = '/Hoosh/japan room - empty.png';
+  const backgroundImageSrc = '/Hoosh/Hooch1.png';
   const items: ItemType[] = [
     {
-      imageSrc: process.env.PUBLIC_URL + '/Hoosh/sushi.png',
+      imageSrc: process.env.PUBLIC_URL + '/Hoosh/Asset 3.png',
       id: "0",
-      x: 1005,
-      y: 638,
+      scale: 1,
+      x: 800,
+      y: 390,
       onClick: () => { },
     },
     {
-      imageSrc: process.env.PUBLIC_URL + '/Hoosh/chance cat.png',
+      imageSrc: process.env.PUBLIC_URL + '/Hoosh/Asset 4.png',
       id: "1",
-      x: 380,
-      y: 550,
-      onClick: () => { },
-    },
-    {
-      imageSrc: process.env.PUBLIC_URL + '/Hoosh/cherry blossom vase.png',
-      id: "3",
-      x: 710,
+      x: 550,
       y: 470,
       onClick: () => { },
     },
     {
-      imageSrc: process.env.PUBLIC_URL + '/Hoosh/dragon.png',
+      imageSrc: process.env.PUBLIC_URL + '/Hoosh/Layer 2.png',
+      id: "3",
+      x: 180,
+      y: 550,
+      onClick: () => { },
+    },
+    {
+      imageSrc: process.env.PUBLIC_URL + '/Hoosh/evolution poster.png',
       id: "4",
-      x: 240,
-      y: 230,
+      scale: 0.25,
+      x: 4400,
+      y: 1600,
       onClick: () => { },
     },
     {
-      imageSrc: process.env.PUBLIC_URL + '/Hoosh/katana.png',
+      imageSrc: process.env.PUBLIC_URL + '/Hoosh/Asset 7.png',
       id: "5",
-      x: 130,
-      y: 698,
-      onClick: () => { },
-    },
-    {
-      imageSrc: process.env.PUBLIC_URL + '/Hoosh/japan frame.png',
-      id: "6",
       x: 1220,
-      y: 235,
-      disabled: true,
+      y: 315,
       onClick: () => { },
     },
     {
-      imageSrc: process.env.PUBLIC_URL + '/Hoosh/door.png',
+      imageSrc: process.env.PUBLIC_URL + '/Hoosh/Asset 5.png',
+      id: "6",
+      x: 320,
+      y: 355,
+      //disabled: true,
+      onClick: () => { },
+    },
+    {
+      imageSrc: process.env.PUBLIC_URL + '/Hoosh/Asset 1.png',
       id: "7",
-      x: 1330,
-      y: 750,
-      disabled: true,
+      x: 1120,
+      y: 450,
+      //disabled: true,
       onClick: () => { },
     },
   ];

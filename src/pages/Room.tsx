@@ -6,9 +6,21 @@ import { changeOpenChatRoomAction } from '../redux/slices/account';
 import Layout from '../containers/Layout';
 
 import Japan from './Rooms/Japan';
+import Algorithm from './Rooms/Alogorithm';
+import Data from './Rooms/Data';
+import Hoosh from './Rooms/Hoosh';
+import Source from './Rooms/Source';
+import Finio1 from './Rooms/Finio1';
+import Finio2 from './Rooms/Finio2';
 
 const rooms = {
-  'japan': <Japan />
+  'japan': <Japan />,
+  'algorithm': <Algorithm/>,
+  'data': <Data/>,
+  'hoosh': <Hoosh/>,
+  'source': <Source/>,
+  'finio1': <Finio1/>,
+  'finio2': <Finio2/>,
 }
 
 const Room = ({

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { ItemType } from '../../types/global';
-import RoomBase from './RoomBase';
+import RoomBase from './RoomTemplate';
 
 const Japan = () => {
   const backgroundImageSrc = '/japan/japan room - empty.png';

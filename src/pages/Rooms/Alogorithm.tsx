@@ -1,61 +1,82 @@
 import React, { FC } from 'react';
 import { ItemType } from '../../types/global';
-import RoomBase from './RoomBase';
+import RoomBase from './RoomTemplate';
 
 const Algorithm = () => {
-  const backgroundImageSrc = '/Algorithm/japan room - empty.png';
+  const backgroundImageSrc = '/Algorithm/Algor1.png';
   const items: ItemType[] = [
     {
-      imageSrc: process.env.PUBLIC_URL + '/Algorithm/sushi.png',
+      imageSrc: process.env.PUBLIC_URL + '/Algorithm/Asset 1.png',
       id: "0",
-      x: 1005,
-      y: 638,
+      scale: 1.7,
+      x: 600,
+      y: 288,
       onClick: () => { },
     },
     {
-      imageSrc: process.env.PUBLIC_URL + '/Algorithm/chance cat.png',
-      id: "1",
-      x: 380,
-      y: 550,
-      onClick: () => { },
-    },
-    {
-      imageSrc: process.env.PUBLIC_URL + '/Algorithm/cherry blossom vase.png',
-      id: "3",
-      x: 710,
-      y: 470,
-      onClick: () => { },
-    },
-    {
-      imageSrc: process.env.PUBLIC_URL + '/Algorithm/dragon.png',
-      id: "4",
-      x: 240,
-      y: 230,
-      onClick: () => { },
-    },
-    {
-      imageSrc: process.env.PUBLIC_URL + '/Algorithm/katana.png',
-      id: "5",
-      x: 130,
-      y: 698,
-      onClick: () => { },
-    },
-    {
-      imageSrc: process.env.PUBLIC_URL + '/Algorithm/japan frame.png',
-      id: "6",
-      x: 1220,
-      y: 235,
-      disabled: true,
-      onClick: () => { },
-    },
-    {
-      imageSrc: process.env.PUBLIC_URL + '/Algorithm/door.png',
-      id: "7",
-      x: 1330,
-      y: 750,
-      disabled: true,
-      onClick: () => { },
-    },
+        imageSrc: process.env.PUBLIC_URL + '/Algorithm/Asset 2.png',
+        id: "0",
+        scale: 1.7,
+        x: 380,
+        y: 278,
+        onClick: () => { },
+      },
+      {
+        imageSrc: process.env.PUBLIC_URL + '/Algorithm/Asset 3.png',
+        id: "0",
+        scale: 1,
+        x: 40,
+        y: 520,
+        onClick: () => { },
+      },
+      {
+        imageSrc: process.env.PUBLIC_URL + '/Algorithm/Asset 4.png',
+        id: "0",
+        scale: 1,
+        x: 200,
+        y: 640,
+        onClick: () => { },
+      },
+      {
+        imageSrc: process.env.PUBLIC_URL + '/Algorithm/Asset 5.png',
+        id: "0",
+        scale: 1.2,
+        x: 540,
+        y: 540,
+        onClick: () => { },
+      },
+      {
+        imageSrc: process.env.PUBLIC_URL + '/Algorithm/Asset 6.png',
+        id: "0",
+        scale: 1.2,
+        x: 1035,
+        y: 515,
+        onClick: () => { },
+      },
+      {
+        imageSrc: process.env.PUBLIC_URL + '/Algorithm/Asset 7.png',
+        id: "0",
+        scale: 1.2,
+        x: 860,
+        y: 335,
+        onClick: () => { },
+      },
+      {
+        imageSrc: process.env.PUBLIC_URL + '/Algorithm/Asset 8.png',
+        id: "0",
+        scale: 1.2,
+        x: 460,
+        y: 300,
+        onClick: () => { },
+      },
+      {
+        imageSrc: process.env.PUBLIC_URL + '/Algorithm/Asset 9.png',
+        id: "0",
+        scale: 1.2,
+        x: 350,
+        y: 540,
+        onClick: () => { },
+      },
   ];
 
   return (
