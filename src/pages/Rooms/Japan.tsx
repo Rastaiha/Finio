@@ -17,7 +17,7 @@ const Japan = ({
       x: 1005,
       y: 638,
       onClick: () => {
-        setProblemDialog({ problemGroupId: 1 })
+        setProblemDialog({ problemGroupId: 4 })
       },
     },
     {
@@ -35,7 +35,7 @@ const Japan = ({
       x: 710,
       y: 470,
       onClick: () => {
-
+        setProblemDialog({ problemGroupId: 7 })
       },
     },
     {

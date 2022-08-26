@@ -17,18 +17,18 @@ export const errorHandler = (
     });
   }
 
-  // if (error?.response?.data?.detail) {
-  //   return rejectWithValue({
-  //     message: error?.response?.data?.detail,
-  //   });
-  // }
-
   switch (error.response.status) {
     case 401:
       dispatch({ type: 'account/logout' });
       return rejectWithValue({
         message: 'نام کاربری یا رمز عبور اشتباه است.',
       });
+    case 403:
+      if (error?.response?.data?.detail) {
+        return rejectWithValue({
+          message: error?.response?.data?.detail,
+        });
+      }
     case 404:
       return rejectWithValue({
         message: 'موردی یافت نشد!',

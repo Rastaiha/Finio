@@ -29,8 +29,8 @@ const Item: FC<ItemPropsType> = ({
       x={data.x * scale}
       y={data.y * scale}
       opacity={1}
-      scaleX={(hover && !data.disabled) ? scale + 0.03 : scale}
-      scaleY={(hover && !data.disabled) ? scale + 0.03 : scale}
+      scaleX={(hover && !data.disabled) ? scale + 0.05 : scale}
+      scaleY={(hover && !data.disabled) ? scale + 0.05 : scale}
 
       onTap={(e) => {
         setHover(true);
