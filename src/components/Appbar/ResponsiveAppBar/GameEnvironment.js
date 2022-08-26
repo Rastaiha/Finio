@@ -9,7 +9,6 @@ import LogoutButton from './components/LogoutButton';
 
 const ArticleAppBarItems = () => {
   const t = useTranslate();
-  const logoButton = <LogoButton />;
   const notificationsButton = <NotificationsButton />;
   const menuButton = <MenuButton />;
   const jitsiButton = <JitsiButton />
@@ -17,9 +16,9 @@ const ArticleAppBarItems = () => {
 
   return {
     desktopLeftItems: [logoutButton],
-    desktopRightItems: [menuButton, jitsiButton, notificationsButton],
+    desktopRightItems: [jitsiButton, notificationsButton],
     mobileLeftItems: [logoutButton],
-    mobileRightItems: [menuButton, jitsiButton, notificationsButton],
+    mobileRightItems: [jitsiButton, notificationsButton],
     mobileMenuListItems: [],
   };
 };

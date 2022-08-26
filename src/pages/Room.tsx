@@ -29,24 +29,19 @@ const rooms = {
 }
 
 const Room = ({
-  openChatRoom,
-  chatRoom,
+  team,
 
+  openChatRoom,
   getUserNotifications,
   changeOpenChatRoom,
   getTeam,
 }) => {
   const { roomName } = useParams();
 
-  console.log(roomName)
-
-  // chatRoom = 'https://gharar.ir/r/a2811286';
-
   useEffect(() => {
     getTeam({});
     getUserNotifications({});
   }, [])
-
 
   if (!roomName) {
     return <></>
@@ -55,11 +50,11 @@ const Room = ({
   return (
     <Layout>
       {rooms[roomName]}
-      {chatRoom &&
+      {team?.chat_room &&
         <DraggableChatRoom
           open={openChatRoom}
           handleClose={changeOpenChatRoom}
-          chatRoom={chatRoom} />
+          chatRoom={team.chat_room} />
       }
       <ProblemDialog />
     </Layout>
@@ -67,7 +62,7 @@ const Room = ({
 };
 
 const mapStateToProps = (state) => ({
-  chatRoom: state.account.chatRoom,
+  team: state.account.team,
   openChatRoom: state.account.openChatRoom,
 })
 

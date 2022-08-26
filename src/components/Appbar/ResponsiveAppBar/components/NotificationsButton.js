@@ -26,13 +26,10 @@ const Index = ({ getUserNotifications }) => {
 
   return <>
     <Tooltip arrow title='اعلان‌ها'>
-      <IconButton
-        className={classes.logoButton}
-        onClick={() => {
-          setOpenDialog(!openDialog);
-          getUserNotifications();
-        }}
-        size="large">
+      <IconButton size={width == 'xs' ? 'small' : 'medium'} onClick={() => {
+        setOpenDialog(!openDialog);
+        getUserNotifications();
+      }}>
         <NotificationsIcon />
       </IconButton>
     </Tooltip>

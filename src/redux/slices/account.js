@@ -94,7 +94,7 @@ const accountSlice = createSlice({
 
     [getTeamAction.pending.toString()]: isFetching,
     [getTeamAction.fulfilled.toString()]: (state, { payload: { response } }) => {
-      state.player = response;
+      state.team = response;
       state.isFetching = false;
     },
     [getTeamAction.rejected.toString()]: isNotFetching,
