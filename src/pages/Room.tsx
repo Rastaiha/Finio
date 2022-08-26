@@ -10,6 +10,7 @@ import {
 import Layout from '../containers/Layout';
 import ProblemDialog from '../components/Dialog/ProblemDialog'
 
+import Doors from './Rooms/Doors';
 import Japan from './Rooms/Japan';
 import Algorithm from './Rooms/Alogorithm';
 import Data from './Rooms/Data';
@@ -19,7 +20,7 @@ import Finio1 from './Rooms/Finio1';
 import Finio2 from './Rooms/Finio2';
 
 const rooms = {
-  'japan': <Japan />,
+  'doors': <Doors />,
   'algorithm': <Algorithm />,
   'data': <Data />,
   'hoosh': <Hoosh />,
