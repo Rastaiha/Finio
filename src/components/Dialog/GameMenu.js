@@ -10,6 +10,7 @@ import {
   Hidden,
   Paper,
   Slide,
+  Stack,
   Typography,
   Zoom,
 } from '@mui/material';
@@ -34,78 +35,35 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Index({
+function GameMenu({
   handleClose,
-  getPlayer,
 
   open,
-  player,
+  team,
 }) {
-  const classes = useStyles();
 
 
   return (
     <Dialog maxWidth="sm" TransitionComponent={Slide} open={open} onClose={handleClose} >
       <DialogTitle>
         <Typography align='center' variant='h2'>
-          {`تیم ${player?.name}`}
+          {`تیم ${team?.name}`}
         </Typography>
       </DialogTitle>
       <DialogContent>
         <Grid container spacing={1} justifyContent='center'>
-          <Grid item container xs={12} sm={6} alignItems='center' justifyContent='center' spacing={1}>
-            <img
-              style={{ borderRadius: 5 }}
-              width='200px' alt=''
-              src={process.env.PUBLIC_URL + '/items/question_mark.jpg'} />
-          </Grid>
-
           <Grid item container xs={12} sm={6} alignItems='center' justifyContent='center'>
-            <Grid item container xs={12}>
+            <Stack spacing={2}>
               <Typography variant='h3' gutterBottom>
                 {'دارایی‌ها:'}
               </Typography>
-            </Grid>
-            <Grid item container alignItems='center' spacing={1} xs={12} sm={6}>
-              <Grid item>
+              <Stack direction='row' spacing={1}>
                 <img width='40px' alt='' src={process.env.PUBLIC_URL + '/items/coin.png'} />
-              </Grid>
-              <Grid item>
                 <Typography>
-                  {`سکه: ${toPersianNumber(player?.coin || 0)}`}
+                  {`سکه: ${toPersianNumber(team?.coin || 0)}`}
                 </Typography>
-              </Grid>
-            </Grid>
-            <Grid item container alignItems='center' spacing={1} xs={12} sm={6}>
-              <Grid item>
-                <img width='40px' alt='' src={process.env.PUBLIC_URL + '/items/blue_toot.png'} />
-              </Grid>
-              <Grid item>
-                <Typography>
-                  {`توت آبی: ${toPersianNumber(player?.blue_toot || 0)}`}
-                </Typography>
-              </Grid>
-            </Grid>
-            <Grid item container alignItems='center' spacing={1} xs={12} sm={6}>
-              <Grid item>
-                <img width='40px' alt='' src={process.env.PUBLIC_URL + '/items/red_toot.png'} />
-              </Grid>
-              <Grid item>
-                <Typography>
-                  {`توت قرمز: ${toPersianNumber(player?.red_toot || 0)}`}
-                </Typography>
-              </Grid>
-            </Grid>
-            <Grid item container alignItems='center' spacing={1} xs={12} sm={6}>
-              <Grid item>
-                <img width='40px' alt='' src={process.env.PUBLIC_URL + '/items/black_toot.png'} />
-              </Grid>
-              <Grid item>
-                <Typography>
-                  {`توت سیاه: ${toPersianNumber(player?.black_toot || 0)}`}
-                </Typography>
-              </Grid>
-            </Grid>
+              </Stack>
+            </Stack>
           </Grid>
         </Grid>
       </DialogContent>
@@ -114,7 +72,7 @@ function Index({
 }
 
 const mapStateToProps = (state, props) => ({
-  player: state.account.player,
+  team: state.account.team,
 })
 
 export default connect(
@@ -122,4 +80,4 @@ export default connect(
   {
     getPlayer: getTeamAction,
   }
-)(Index);
+)(GameMenu);

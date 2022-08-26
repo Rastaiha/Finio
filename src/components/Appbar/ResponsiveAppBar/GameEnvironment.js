@@ -16,10 +16,10 @@ const ArticleAppBarItems = () => {
 
   return {
     desktopLeftItems: [logoutButton],
-    desktopRightItems: [jitsiButton, notificationsButton],
-    mobileLeftItems: [logoutButton],
-    mobileRightItems: [jitsiButton, notificationsButton],
-    mobileMenuListItems: [],
+    desktopRightItems: [menuButton, jitsiButton, notificationsButton],
+    mobileLeftItems: [jitsiButton, notificationsButton],
+    mobileRightItems: [menuButton],
+    mobileMenuListItems: [logoutButton],
   };
 };
 
