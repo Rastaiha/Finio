@@ -11,8 +11,10 @@ const Root = () => {
       <Route path="/loading/"></Route>
       <Route path="/" element={<Login />} />
 
+      <Route path="/room/:roomName/" element={<Room />} />
+
+
       <Route path="/" element={<PrivateRoute />}>
-        <Route path="/room/:roomName/" element={<Room />} />
       </Route>
       <Route path="*" element={<Login />} />
     </Routes>
