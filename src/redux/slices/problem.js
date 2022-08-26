@@ -71,6 +71,7 @@ const accountSlice = createSlice({
       console.log(response)
       state.problem = response.problem;
       state.answer = response.answer;
+      state.submit = response.submit;
       state.isFetching = false;
     },
     [getProblemFromGroupAction.rejected.toString()]: isNotFetching,

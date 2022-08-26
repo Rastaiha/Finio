@@ -6,8 +6,13 @@ import {
   DialogContent,
   DialogTitle,
   Grow,
+  IconButton,
 } from '@mui/material';
-import React, { useEffect } from 'react';
+import {
+  CloudUpload as CloudUploadIcon,
+} from '@mui/icons-material';
+import ClearIcon from '@mui/icons-material/Clear';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import TinyPreview from '../tiny_editor/react_tiny/Preview';
 import {
@@ -15,16 +20,19 @@ import {
   setProblemDialogAction,
   submitAnswerAction,
 } from '../../redux/slices/problem';
+import SubmitAnswerButton from '../atoms/SubmitAnswerButton';
 
 function ProblemDialog({
   openProblemDialog,
   problem,
   answer,
+  submit,
   problemGroupId,
 
   setProblemDialog,
   getProblemFromGroup,
 }) {
+  const [answerFile, setAnswerFile] = useState(null);
 
   useEffect(() => {
     if (problemGroupId) {
@@ -38,7 +46,7 @@ function ProblemDialog({
   return (
     <Dialog maxWidth="xs" TransitionComponent={Grow} open={openProblemDialog} onClose={setProblemDialog}>
       <DialogTitle>
-        {'مسئله فلان'}
+        {problem?.title}
       </DialogTitle>
       <DialogContent>
         <TinyPreview
@@ -51,16 +59,7 @@ function ProblemDialog({
         />
       </DialogContent>
       <DialogActions>
-        <ButtonGroup fullWidth variant='contained' color='primary'>
-          <Button
-            onClick={() => { }}>
-            {'ارسال'}
-          </Button>
-          <Button
-            onClick={() => { }}>
-            {'لغو'}
-          </Button>
-        </ButtonGroup>
+        <SubmitAnswerButton submitId={submit?.id} problemId={problem?.id} />
       </DialogActions>
     </Dialog >
   );
@@ -71,6 +70,7 @@ const mapStateToProps = (state) => ({
   problemGroupId: state.problem.problemGroupId,
   problem: state.problem.problem,
   answer: state.problem.answer,
+  submit: state.problem.submit,
 })
 
 export default connect(mapStateToProps, {

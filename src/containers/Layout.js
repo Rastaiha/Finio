@@ -1,14 +1,10 @@
 import { Container } from '@mui/material';
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 import AppBar from '../components/Appbar/ResponsiveAppBar';
 
 const Layout = ({
-  getPlayer,
-  getUserNotifications,
   ...props
 }) => {
-
   return (
     <>
       <AppBar mode="GAME_ENVIRONMENT" position="fixed" />
@@ -23,7 +19,4 @@ const Layout = ({
   );
 };
 
-export default connect(null, {
-  getPlayer: getTeamAction,
-  getUserNotifications: getUserNotificationsAction,
-})(Layout);
+export default Layout;

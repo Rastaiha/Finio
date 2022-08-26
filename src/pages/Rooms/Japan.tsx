@@ -1,14 +1,10 @@
 import React, { FC } from 'react';
 import { ItemType } from '../../types/global';
-<<<<<<< HEAD
 import RoomBase from './RoomTemplate';
-=======
-import RoomBase from './RoomBase';
 import {
   setProblemDialogAction,
 } from '../../redux/slices/problem';
 import { connect } from 'react-redux';
->>>>>>> 84f6f173e8a6e9904f7031f685873df936417038
 
 const Japan = ({
   setProblemDialog,

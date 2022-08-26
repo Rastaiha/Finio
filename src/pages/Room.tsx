@@ -12,7 +12,6 @@ import ProblemDialog from '../components/Dialog/ProblemDialog'
 
 import Japan from './Rooms/Japan';
 import Algorithm from './Rooms/Alogorithm';
-<<<<<<< HEAD
 import Data from './Rooms/Data';
 import Hoosh from './Rooms/Hoosh';
 import Source from './Rooms/Source';
@@ -21,18 +20,12 @@ import Finio2 from './Rooms/Finio2';
 
 const rooms = {
   'japan': <Japan />,
-  'algorithm': <Algorithm/>,
-  'data': <Data/>,
-  'hoosh': <Hoosh/>,
-  'source': <Source/>,
-  'finio1': <Finio1/>,
-  'finio2': <Finio2/>,
-=======
-
-const rooms = {
-  'japan': <Japan />,
   'algorithm': <Algorithm />,
->>>>>>> 84f6f173e8a6e9904f7031f685873df936417038
+  'data': <Data />,
+  'hoosh': <Hoosh />,
+  'source': <Source />,
+  'finio1': <Finio1 />,
+  'finio2': <Finio2 />,
 }
 
 const Room = ({

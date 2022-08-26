@@ -11,11 +11,11 @@ const redirectSlice = createSlice({
     initRedirect: () => initialState,
   },
   extraReducers: {
-    [getProblemFromGroupAction.fulfilled.toString()]: (state, action) => {
-      return {
-        redirectTo: `/problem/${action?.meta?.arg.groupProblemId}/${action.payload.response.submit.id}/${action.payload.response.problem.id}/`,
-      };
-    },
+    // [getProblemFromGroupAction.fulfilled.toString()]: (state, action) => {
+    //   return {
+    //     redirectTo: `/problem/${action?.meta?.arg.groupProblemId}/${action.payload.response.submit.id}/${action.payload.response.problem.id}/`,
+    //   };
+    // },
   }
 });
 
