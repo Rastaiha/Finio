@@ -1,7 +1,7 @@
 import { Paper, Box, Fade } from '@mui/material';
 import React, { FC, useState } from 'react';
 import Draggable from 'react-draggable';
-import useWidth from '../../utils/UseWidth';
+import useWidth from '../../../utils/UseWidth';
 import ChatRoom from './ChatRoom';
 
 type DraggableChatRoomPropsType = {

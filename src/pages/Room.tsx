@@ -1,7 +1,7 @@
 import React, { FC, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import DraggableChatRoom from '../components/ChatRoom/DraggableChatRoom';
+import DraggableChatRoom from '../components/organism/ChatRoom/DraggableChatRoom';
 import {
   changeOpenChatRoomAction,
   getTeamAction,

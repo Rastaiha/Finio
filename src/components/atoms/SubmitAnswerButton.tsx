@@ -34,12 +34,11 @@ function submitAnswerButton({
           answerFile: file,
         }).then((response) => {
           if (response.type?.endsWith('fulfilled')) {
+            handleClose();
             setAnswerFile(file);
           } else {
             e.target.value = null;
           }
-          console.log("!!!!!!!!!!!!1")
-          handleClose();
         })
       } else {
         e.target.value = null;
@@ -56,7 +55,7 @@ function submitAnswerButton({
 
   return (
     <>
-      {
+      {/* {
         answerFile &&
         <Button
           size="small"
@@ -74,7 +73,7 @@ function submitAnswerButton({
           target="_blank">
           {answerFile?.name ? answerFile?.name.substring(0, 30) : 'پاسخ ارسال شده'}
         </Button>
-      }
+      } */}
       <Button
         component="label"
         htmlFor={'submit-answer'}

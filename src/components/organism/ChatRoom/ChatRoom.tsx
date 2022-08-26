@@ -3,7 +3,7 @@ import {
   Cancel as CancelIcon,
 } from '@mui/icons-material';
 import React, { FC, useRef } from 'react';
-import useWidth from '../../utils/UseWidth';
+import useWidth from '../../../utils/UseWidth';
 
 type ChatRoomPropsType = {
   handleClose: any;
