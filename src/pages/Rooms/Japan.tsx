@@ -1,8 +1,18 @@
 import React, { FC } from 'react';
 import { ItemType } from '../../types/global';
+<<<<<<< HEAD
 import RoomBase from './RoomTemplate';
+=======
+import RoomBase from './RoomBase';
+import {
+  setProblemDialogAction,
+} from '../../redux/slices/problem';
+import { connect } from 'react-redux';
+>>>>>>> 84f6f173e8a6e9904f7031f685873df936417038
 
-const Japan = () => {
+const Japan = ({
+  setProblemDialog,
+}) => {
   const backgroundImageSrc = '/japan/japan room - empty.png';
   const items: ItemType[] = [
     {
@@ -10,14 +20,18 @@ const Japan = () => {
       id: "0",
       x: 1005,
       y: 638,
-      onClick: () => { },
+      onClick: () => {
+        setProblemDialog({ problemGroupId: 1 })
+      },
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/japan/chance cat.png',
       id: "1",
       x: 380,
       y: 550,
-      onClick: () => { },
+      onClick: () => {
+        setProblemDialog({ problemGroupId: 1 })
+      },
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/japan/cherry blossom vase.png',
@@ -63,4 +77,10 @@ const Japan = () => {
   );
 };
 
-export default Japan;
+const mapStateToProps = (state) => ({
+
+})
+
+export default connect(setProblemDialogAction, {
+  setProblemDialog: setProblemDialogAction,
+})(Japan);

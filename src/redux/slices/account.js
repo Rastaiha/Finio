@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { Apis } from '../apis';
 import { createAsyncThunkApi } from '../apis/cerateApiAsyncThunk';
 import {
-  getPlayerUrl,
+  getTeamUrl,
   loginUrl,
   userNotificationsUrl,
 } from '../constants/urls';
@@ -20,17 +20,16 @@ export const loginAction = createAsyncThunkApi(
   }
 );
 
-export const getPlayerAction = createAsyncThunkApi(
-  'users/getPlayerAction',
+export const getTeamAction = createAsyncThunkApi(
+  'users/getTeamAction',
   Apis.GET,
-  getPlayerUrl,
+  getTeamUrl,
   {
     defaultNotification: {
       error: 'مشکلی در دریافت مشخصات بازیکن وجود داشت.',
     },
   }
 );
-
 
 export const getUserNotificationsAction = createAsyncThunkApi(
   'users/getUserNotificationsAction',
@@ -60,6 +59,7 @@ const initialState = {
   user: {},
   notifications: [],
   openChatRoom: false,
+  currentRoom: null,
 };
 
 const isFetching = (state) => {
@@ -78,6 +78,9 @@ const accountSlice = createSlice({
     changeOpenChatRoom: (state, actions) => {
       state.openChatRoom = !state.openChatRoom;
     },
+    changeRoomState: (state, actions) => {
+      state.currentRoom = actions.payload.currentRoom;
+    },
   },
   extraReducers: {
     [loginAction.pending.toString()]: isFetching,
@@ -89,12 +92,12 @@ const accountSlice = createSlice({
     [loginAction.rejected.toString()]: isNotFetching,
 
 
-    [getPlayerAction.pending.toString()]: isFetching,
-    [getPlayerAction.fulfilled.toString()]: (state, { payload: { response } }) => {
+    [getTeamAction.pending.toString()]: isFetching,
+    [getTeamAction.fulfilled.toString()]: (state, { payload: { response } }) => {
       state.player = response;
       state.isFetching = false;
     },
-    [getPlayerAction.rejected.toString()]: isNotFetching,
+    [getTeamAction.rejected.toString()]: isNotFetching,
 
 
     [getUserNotificationsAction.pending.toString()]: isFetching,
@@ -124,7 +127,8 @@ const accountSlice = createSlice({
 
 export const {
   logout: logoutAction,
-  changeOpenChatRoom: changeOpenChatRoomAction
+  changeOpenChatRoom: changeOpenChatRoomAction,
+  changeRoomState: changeRoomStateAction,
 } = accountSlice.actions;
 
 export const { reducer: accountReducer } = accountSlice;

@@ -34,7 +34,7 @@ const LoginPage: FC<LoginPagePropsType> = ({
 
   useEffect(() => {
     if (token) {
-      navigate('/japan/');
+      navigate('/room/japan/');
     }
   }, [token])
 

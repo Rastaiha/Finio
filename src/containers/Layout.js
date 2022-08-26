@@ -1,23 +1,13 @@
 import { Container } from '@mui/material';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-
 import AppBar from '../components/Appbar/ResponsiveAppBar';
-import {
-  getPlayerAction,
-  getUserNotificationsAction,
-} from '../redux/slices/account';
 
 const Layout = ({
   getPlayer,
   getUserNotifications,
   ...props
 }) => {
-
-  useEffect(() => {
-    getPlayer();
-    getUserNotifications();
-  }, []);
 
   return (
     <>
@@ -34,6 +24,6 @@ const Layout = ({
 };
 
 export default connect(null, {
-  getPlayer: getPlayerAction,
+  getPlayer: getTeamAction,
   getUserNotifications: getUserNotificationsAction,
 })(Layout);
