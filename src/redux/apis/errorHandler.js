@@ -7,7 +7,7 @@ export const errorHandler = (
 ) => {
   if (!error.response) {
     return rejectWithValue({
-      message: 'ارتباطت با مشکل مواجه شده. یه چند لحظه دیگه دوباره تلاش کن!',
+      message: 'ارتباط با سرور دچار مشکل مواجه شده است.',
     });
   }
 
@@ -17,21 +17,17 @@ export const errorHandler = (
     });
   }
 
-
-  if (error?.response?.data?.detail) {
-    return rejectWithValue({
-      message: error?.response?.data?.detail,
-    });
-  }
+  // if (error?.response?.data?.detail) {
+  //   return rejectWithValue({
+  //     message: error?.response?.data?.detail,
+  //   });
+  // }
 
   switch (error.response.status) {
     case 401:
-      if (error.config.url === 'auth/token/obtain/') {
-        break;
-      }
       dispatch({ type: 'account/logout' });
       return rejectWithValue({
-        message: 'اکانت  فعالی وجود نداشت!',
+        message: 'نام کاربری یا رمز عبور اشتباه است.',
       });
     case 404:
       return rejectWithValue({
@@ -39,7 +35,7 @@ export const errorHandler = (
       });
     case 500:
       return rejectWithValue({
-        message: 'ایرادی پیش اومده! لطفا ما را در جریان بذار!',
+        message: 'ایراد سروری پیش آمده! لطفاً ما را در جریان بگذارید.',
       });
   }
 

@@ -6,6 +6,7 @@ import { ThemeProvider } from '@mui/material';
 import { SnackbarProvider } from 'notistack';
 import { CacheProvider } from "@emotion/react";
 import { connect } from 'react-redux';
+import Notifier from './components/Notifications/Notifications';
 import createEmotionCache from './configs/createEmotionCache'
 import selectTheme from './configs/themes';
 import Root from './routes';
@@ -33,6 +34,7 @@ const App = ({ loading }) => {
       <ThemeProvider theme={selectTheme(dir)}>
         <SnackbarProvider>
           <Loading />
+          <Notifier />
           <CssBaseline />
           <Root />
         </SnackbarProvider>

@@ -34,10 +34,6 @@ function ProblemDialog({
     }
   }, [problemGroupId])
 
-  console.log(problem);
-  console.log(submit);
-  console.log(message)
-
   return (
     <Dialog maxWidth="xs" TransitionComponent={Grow} open={openProblemDialog} onClose={setProblemDialog}>
       <DialogTitle>
@@ -64,7 +60,7 @@ function ProblemDialog({
           <Button variant='outlined' onClick={setProblemDialog}>
             {'متوجه شدم'}
           </Button>
-          : <SubmitAnswerButton submitId={submit?.id} problemId={problem?.id} />
+          : <SubmitAnswerButton handleClose={setProblemDialog} submitId={submit?.id} problemId={problem?.id} />
         }
       </DialogActions>
     </Dialog >

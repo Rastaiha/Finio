@@ -8,7 +8,7 @@ import {
   getUserNotificationsAction,
 } from '../redux/slices/account';
 import Layout from '../containers/Layout';
-import ProblemDialog from '../components/Dialog/ProblemDialog'
+import ProblemDialog from '../components/organism/ProblemDialog'
 
 import Doors from './Rooms/Doors';
 import Japan from './Rooms/Japan';

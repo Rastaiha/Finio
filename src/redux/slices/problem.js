@@ -56,7 +56,7 @@ const accountSlice = createSlice({
   initialState,
   reducers: {
     setProblemDialog: (state, action) => {
-      state.problemGroupId = action.payload.problemGroupId;
+      state.problemGroupId = action.payload?.problemGroupId;
       state.openProblemDialog = !state.openProblemDialog;
     },
   },

@@ -15,31 +15,31 @@ import { baseURL } from '../../configs/axios'
 
 function submitAnswerButton({
   isFetching,
-  answer,
-  submitAnswer,
   submitId,
   problemId,
+
+  submitAnswer,
+  handleClose,
 }) {
-  const [answerFile, setAnswerFile] = useState(answer);
+  const [answerFile, setAnswerFile] = useState(null);
 
   const changeFile = (e) => {
     e.preventDefault();
     const file = e.target.files[0];
     if (file) {
-      if (file.size <= 8e6) {
+      if (file.size <= 9e6) {
         submitAnswer({
           submitId,
           problemId,
           answerFile: file,
         }).then((response) => {
           if (response.type?.endsWith('fulfilled')) {
-            setAnswerFile({
-              link: response.payload?.response?.answer_file,
-              name: file.name,
-            });
+            setAnswerFile(file);
           } else {
             e.target.value = null;
           }
+          console.log("!!!!!!!!!!!!1")
+          handleClose();
         })
       } else {
         e.target.value = null;

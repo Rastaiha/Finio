@@ -3,7 +3,6 @@ import Grow from '@mui/material/Grow';
 import { useSnackbar } from 'notistack';
 import React from 'react';
 import { connect } from 'react-redux';
-import { useTranslate } from 'react-redux-multilingual/lib/context';
 
 import { removeNotificationAction } from '../../redux/slices/notifications';
 
@@ -20,7 +19,6 @@ const Notifications = ({ notifications = [], removeSnackbar }) => {
     displayed = [...displayed.filter((key) => id !== key)];
   };
 
-  const t = useTranslate();
 
   React.useEffect(() => {
     notifications.forEach(
@@ -57,7 +55,6 @@ const Notifications = ({ notifications = [], removeSnackbar }) => {
                 removeSnackbar({ key });
                 removeDisplayed(key);
               }}>
-              {t('dismiss')}
             </Button>
           ),
         });
@@ -65,7 +62,7 @@ const Notifications = ({ notifications = [], removeSnackbar }) => {
         storeDisplayed(key);
       }
     );
-  }, [notifications, closeSnackbar, enqueueSnackbar, t, removeSnackbar]);
+  }, [notifications, closeSnackbar, enqueueSnackbar, removeSnackbar]);
 
   return null;
 };

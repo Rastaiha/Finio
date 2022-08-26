@@ -53,7 +53,7 @@ function Index({
         {notifications?.length == 0 &&
           <DialogContent>
             <Typography variant='h5' align='center'>
-              {'شما اعلان نخونده‌ای ندارید!'}
+              {'شما اعلان نخوانده‌ای ندارید!'}
             </Typography>
           </DialogContent>
         }
