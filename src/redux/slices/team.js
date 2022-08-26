@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { Apis } from '../apis';
 import { createAsyncThunkApi } from '../apis/cerateApiAsyncThunk';
 import {
-  getPlayerUrl,
+  getTeamUrl,
   loginUrl,
   userNotificationsUrl,
 } from '../constants/urls';
@@ -23,7 +23,7 @@ export const loginAction = createAsyncThunkApi(
 export const getPlayerAction = createAsyncThunkApi(
   'users/getPlayerAction',
   Apis.GET,
-  getPlayerUrl,
+  getTeamUrl,
   {
     defaultNotification: {
       error: 'مشکلی در دریافت مشخصات بازیکن وجود داشت.',

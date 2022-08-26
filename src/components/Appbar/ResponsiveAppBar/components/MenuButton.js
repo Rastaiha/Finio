@@ -4,7 +4,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 
 import {
-  getPlayerAction,
+  getTeamAction,
 } from '../../../../redux/slices/account'
 import useWidth from '../../../../utils/UseWidth';
 import GameMenu from '../../../Dialog/GameMenu';
@@ -44,4 +44,4 @@ const Index = ({ getPlayer }) => {
   </>;
 }
 
-export default connect(null, { getPlayer: getPlayerAction })(Index);
+export default connect(null, { getPlayer: getTeamAction })(Index);

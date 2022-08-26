@@ -18,7 +18,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import {
-  getPlayerAction
+  getTeamAction
 } from '../../redux/slices/account';
 import { toPersianNumber } from '../../utils/translateNumber'
 
@@ -120,6 +120,6 @@ const mapStateToProps = (state, props) => ({
 export default connect(
   mapStateToProps,
   {
-    getPlayer: getPlayerAction,
+    getPlayer: getTeamAction,
   }
 )(Index);

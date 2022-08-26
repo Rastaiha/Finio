@@ -14,7 +14,6 @@ export const hasPlayerGotProblemAction = createAsyncThunkApi(
   hasPlayerGotProblemUrl,
 );
 
-
 export const getProblemFromGroupAction = createAsyncThunkApi(
   'problem/getProblemFromGroupUrl',
   Apis.POST,
@@ -39,8 +38,9 @@ export const submitAnswerAction = createAsyncThunkApi(
 );
 
 const initialState = {
-  allExchanges: [],
-  playerExchanges: [],
+  openProblemDialog: false,
+  problem: null,
+  problemGroupId: null,
 };
 
 const isFetching = (state) => {
@@ -55,6 +55,10 @@ const accountSlice = createSlice({
   name: 'problem',
   initialState,
   reducers: {
+    setProblemDialog: (state, action) => {
+      state.problemGroupId = action.payload.problemGroupId;
+      state.openProblemDialog = !state.openProblemDialog;
+    },
   },
   extraReducers: {
     [hasPlayerGotProblemAction.pending.toString()]: isFetching,
@@ -64,7 +68,9 @@ const accountSlice = createSlice({
 
     [getProblemFromGroupAction.pending.toString()]: isFetching,
     [getProblemFromGroupAction.fulfilled.toString()]: (state, { payload: { response } }) => {
-      state.problem = response;
+      console.log(response)
+      state.problem = response.problem;
+      state.answer = response.answer;
       state.isFetching = false;
     },
     [getProblemFromGroupAction.rejected.toString()]: isNotFetching,
@@ -76,5 +82,9 @@ const accountSlice = createSlice({
 
   },
 });
+
+export const {
+  setProblemDialog: setProblemDialogAction,
+} = accountSlice.actions;
 
 export const { reducer: problemReducer } = accountSlice;
