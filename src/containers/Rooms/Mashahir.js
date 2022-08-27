@@ -262,7 +262,7 @@ const Index = ({
             <ItemImage
               key={object.id}
               object={object}
-              scale={scaleY}
+              parentScale={scaleY}
               handleMouseEnter={handleMouseEnter}
               handleMouseExit={handleMouseExit}
             />

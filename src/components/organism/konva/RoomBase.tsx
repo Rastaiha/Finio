@@ -56,6 +56,7 @@ const Room: FC<RoomPropsType> = ({ backgroundImageSrc, items }) => {
           />
           {items.map((item) => (
             <Item
+              parentScale={scaleY}
               key={item.id}
               data={item} />
           ))}

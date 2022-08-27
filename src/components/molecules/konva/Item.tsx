@@ -5,10 +5,12 @@ import { ItemType } from '../../../types/global';
 
 type ItemPropsType = {
   data: ItemType;
+  parentScale: number;
 }
 
 const Item: FC<ItemPropsType> = ({
   data,
+  parentScale,
 }) => {
   const [hover, setHover] = useState(false);
   const [image] = useImage(data.imageSrc);
@@ -17,7 +19,7 @@ const Item: FC<ItemPropsType> = ({
     return (<></>)
   }
 
-  const scale = data.scale ? data.scale : 1;
+  const selfScale = data.scale ? data.scale : 1;
 
   return (
     <Image
@@ -26,11 +28,11 @@ const Item: FC<ItemPropsType> = ({
       offsetY={image.height / 2}
       key={data.id}
       id={data.id}
-      x={data.x * scale}
-      y={data.y * scale}
+      x={data.x * parentScale}
+      y={data.y * parentScale}
       opacity={1}
-      scaleX={(hover && !data.disabled) ? scale + 0.03 : scale}
-      scaleY={(hover && !data.disabled) ? scale + 0.03 : scale}
+      scaleX={(hover && !data.disabled) ? (parentScale * selfScale) + 0.03 : (parentScale * selfScale)}
+      scaleY={(hover && !data.disabled) ? (parentScale * selfScale) + 0.03 : (parentScale * selfScale)}
 
       onTap={(e) => {
         setHover(true);
