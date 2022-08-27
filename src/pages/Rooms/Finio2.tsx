@@ -1,6 +1,10 @@
 import React, { FC } from 'react';
 import { ItemType } from '../../types/global';
 import RoomBase from './RoomTemplate';
+import {
+  setProblemDialogAction,
+} from '../../redux/slices/problem';
+import { connect } from 'react-redux';
 
 const Finio2 = () => {
   const backgroundImageSrc = '/Finio2/Background.png';
