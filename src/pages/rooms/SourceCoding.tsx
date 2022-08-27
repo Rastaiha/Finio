@@ -15,8 +15,8 @@ const SourceCoding = ({
       imageSrc: process.env.PUBLIC_URL + '/Source/Asset 7.png',
       id: "0",
       scale: 1,
-      x: 250,
-      y: 480,
+      x: 400,
+      y: 660,
       onClick: () => {
         setProblemDialog({ problemGroupId: 5 })
       },
@@ -25,8 +25,8 @@ const SourceCoding = ({
       imageSrc: process.env.PUBLIC_URL + '/Source/Asset 8.png',
       id: "0",
       scale: 1,
-      x: 360,
-      y: 470,
+      x: 480,
+      y: 650,
       onClick: () => {
         setProblemDialog({ problemGroupId: 33 })
       },
@@ -35,8 +35,8 @@ const SourceCoding = ({
       imageSrc: process.env.PUBLIC_URL + '/Source/Asset 6.png',
       id: "0",
       scale: 1,
-      x: 450,
-      y: 497,
+      x: 600,
+      y: 680,
       onClick: () => {
         setProblemDialog({ problemGroupId: 28 })
       },
@@ -44,9 +44,9 @@ const SourceCoding = ({
     {
       imageSrc: process.env.PUBLIC_URL + '/Source/Asset 5.png',
       id: "0",
-      scale: 0.7,
+      scale: 1,
       x: 250,
-      y: 900,
+      y: 850,
       onClick: () => {
         setProblemDialog({ problemGroupId: 29 })
       },
@@ -54,9 +54,9 @@ const SourceCoding = ({
     {
       imageSrc: process.env.PUBLIC_URL + '/Source/Asset 4.png',
       id: "0",
-      scale: 0.7,
-      x: 1420,
-      y: 547,
+      scale: 1,
+      x: 1333,
+      y: 515,
       onClick: () => {
         setProblemDialog({ problemGroupId: 30 })
       },
@@ -64,9 +64,9 @@ const SourceCoding = ({
     {
       imageSrc: process.env.PUBLIC_URL + '/Source/Asset 3.png',
       id: "0",
-      scale: 0.7,
-      x: 1870,
-      y: 420,
+      scale: 1,
+      x: 1800,
+      y: 390,
       onClick: () => {
         setProblemDialog({ problemGroupId: 31 })
       },
@@ -74,9 +74,9 @@ const SourceCoding = ({
     {
       imageSrc: process.env.PUBLIC_URL + '/Source/Asset 2.png',
       id: "0",
-      scale: 0.7,
+      scale: 1,
       x: 1765,
-      y: 690,
+      y: 850,
       onClick: () => {
         setProblemDialog({ problemGroupId: 32 })
       },
@@ -84,8 +84,8 @@ const SourceCoding = ({
     {
       imageSrc: process.env.PUBLIC_URL + '/Source/Asset 1.png',
       id: "0",
-      scale: 0.7,
-      x: 1600,
+      scale: 1,
+      x: 1450,
       y: 900,
       disabled: true,
       onClick: () => { },
@@ -93,8 +93,8 @@ const SourceCoding = ({
     {
       imageSrc: process.env.PUBLIC_URL + '/Source/Asset 1.png',
       id: "0",
-      scale: 0.7,
-      x: 1600,
+      scale: 1,
+      x: 1450,
       y: 850,
       disabled: true,
       onClick: () => { },
@@ -102,8 +102,8 @@ const SourceCoding = ({
     {
       imageSrc: process.env.PUBLIC_URL + '/Source/Asset 1.png',
       id: "0",
-      scale: 0.7,
-      x: 1600,
+      scale: 1,
+      x: 1450,
       y: 800,
       //disabled: true,
       onClick: () => {
