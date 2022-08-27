@@ -12,9 +12,9 @@ const Doors = () => {
     {
       imageSrc: process.env.PUBLIC_URL + '/Doors/Data.png',
       id: "0",
-      scale: 0.5,
-      x: 1620,
-      y: 800,
+      scale: 0.45,
+      x: 710,
+      y: 345,
       onClick: () => {
         navigate('/room/data/')
       },
@@ -22,9 +22,9 @@ const Doors = () => {
     {
       imageSrc: process.env.PUBLIC_URL + '/Doors/Algo.png',
       id: "0",
-      scale: 0.5,
-      x: 910,
-      y: 765,
+      scale: 0.45,
+      x: 402,
+      y: 335,
       onClick: () => {
         navigate('/room/algorithm/')
       },
@@ -32,9 +32,9 @@ const Doors = () => {
     {
       imageSrc: process.env.PUBLIC_URL + '/Doors/Hoosh.png',
       id: "0",
-      scale: 0.8,
-      x: 320,
-      y: 560,
+      scale: 0.73,
+      x: 225,
+      y: 395,
       onClick: () => {
         navigate('/room/hoosh/')
       },
@@ -42,9 +42,9 @@ const Doors = () => {
     {
       imageSrc: process.env.PUBLIC_URL + '/Doors/Finio.png',
       id: "0",
-      scale: 0.5,
-      x: 1205,
-      y: 710,
+      scale: 0.45,
+      x: 530,
+      y: 318,
       onClick: () => {
         navigate('/room/finio1/')
       },
@@ -52,9 +52,9 @@ const Doors = () => {
     {
       imageSrc: process.env.PUBLIC_URL + '/Doors/Source.png',
       id: "0",
-      scale: 1,
-      x: 1100,
-      y: 500,
+      scale: 0.87,
+      x: 965,
+      y: 434,
       onClick: () => {
         navigate('/room/source/')
       },
