@@ -1,6 +1,10 @@
 import React, { FC } from 'react';
 import { ItemType } from '../../types/global';
 import RoomBase from './RoomTemplate';
+import {
+  setProblemDialogAction,
+} from '../../redux/slices/problem';
+import { connect } from 'react-redux';
 
 const Source = () => {
   const backgroundImageSrc = '/Source/Source1.png';
@@ -11,7 +15,9 @@ const Source = () => {
         scale: 1,
         x: 250,
         y: 480,
-        onClick: () => { },
+        onClick: () => {
+          setProblemDialog({ problemGroupId: 5 })
+        },
       },
       {
         imageSrc: process.env.PUBLIC_URL + '/Source/Asset 8.png',
@@ -19,7 +25,9 @@ const Source = () => {
         scale: 1,
         x: 360,
         y: 470,
-        onClick: () => { },
+        onClick: () => {
+          setProblemDialog({ problemGroupId: 33 })
+        },
       },
       {
         imageSrc: process.env.PUBLIC_URL + '/Source/Asset 6.png',
@@ -27,7 +35,9 @@ const Source = () => {
         scale: 1,
         x: 450,
         y: 497,
-        onClick: () => { },
+        onClick: () => {
+          setProblemDialog({ problemGroupId: 28 })
+        },
       },
       {
         imageSrc: process.env.PUBLIC_URL + '/Source/Asset 5.png',
@@ -35,7 +45,9 @@ const Source = () => {
         scale: 0.7,
         x: 250,
         y: 900,
-        onClick: () => { },
+        onClick: () => {
+          setProblemDialog({ problemGroupId: 29 })
+        },
       },
       {
         imageSrc: process.env.PUBLIC_URL + '/Source/Asset 4.png',
@@ -43,7 +55,9 @@ const Source = () => {
         scale: 0.7,
         x: 1420,
         y: 547,
-        onClick: () => { },
+        onClick: () => {
+          setProblemDialog({ problemGroupId: 30 })
+        },
       },
       {
         imageSrc: process.env.PUBLIC_URL + '/Source/Asset 3.png',
@@ -51,7 +65,9 @@ const Source = () => {
         scale: 0.7,
         x: 1870,
         y: 420,
-        onClick: () => { },
+        onClick: () => {
+          setProblemDialog({ problemGroupId: 31 })
+        },
       },
       {
         imageSrc: process.env.PUBLIC_URL + '/Source/Asset 2.png',
@@ -59,7 +75,9 @@ const Source = () => {
         scale: 0.7,
         x: 1765,
         y: 690,
-        onClick: () => { },
+        onClick: () => {
+          setProblemDialog({ problemGroupId: 32 })
+        },
       },
       {
         imageSrc: process.env.PUBLIC_URL + '/Source/Asset 1.png',
@@ -86,7 +104,9 @@ const Source = () => {
         x: 1600,
         y: 800,
         //disabled: true,
-        onClick: () => { },
+        onClick: () => {
+          setProblemDialog({ problemGroupId: 37 })
+        },
       },
       
   ];

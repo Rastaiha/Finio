@@ -1,6 +1,12 @@
 import React, { FC } from 'react';
 import { ItemType } from '../../types/global';
 import RoomBase from './RoomTemplate';
+import { useNavigate } from 'react-router-dom';
+import Finio2 from './Finio2';
+import {
+  setProblemDialogAction,
+} from '../../redux/slices/problem';
+import { connect } from 'react-redux';
 
 const Finio1 = () => {
   const backgroundImageSrc = '/Finio1/Background.png';
@@ -12,6 +18,7 @@ const Finio1 = () => {
       x: 7800,
       y: 3550,
       onClick: () => { },
+      // must gamble money
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 03.png',
@@ -19,7 +26,9 @@ const Finio1 = () => {
       scale: 0.15,
       x: 1480,
       y: 1550,
-      onClick: () => { },
+      onClick: () => {
+        setProblemDialog({ problemGroupId: 13 })
+      },
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 08.png',
@@ -27,7 +36,9 @@ const Finio1 = () => {
       scale: 0.15,
       x: 7000,
       y: 3250,
-      onClick: () => { },
+      onClick: () => {
+        setProblemDialog({ problemGroupId: 15 })
+      },
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 07.png',
@@ -35,7 +46,9 @@ const Finio1 = () => {
       scale: 0.15,
       x: 8250,
       y: 1500,
-      onClick: () => { },
+      onClick: () => {
+        setProblemDialog({ problemGroupId: 16 })
+      },
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 06.png',
@@ -43,7 +56,9 @@ const Finio1 = () => {
       scale: 0.15,
       x: 8900,
       y: 3100,
-      onClick: () => { },
+      onClick: () => {
+        setProblemDialog({ problemGroupId: 17 })
+      },
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 04.png',
@@ -53,6 +68,7 @@ const Finio1 = () => {
       y: 3900,
       //disabled: true,
       onClick: () => { },
+      // must go to room finio 2
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 02.png',
@@ -61,7 +77,9 @@ const Finio1 = () => {
       x: 1500,
       y: 2800,
       //disabled: true,
-      onClick: () => { },
+      onClick: () => {
+        setProblemDialog({ problemGroupId: 19 })
+      },
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 01.png',
@@ -70,7 +88,9 @@ const Finio1 = () => {
       x: 4800,
       y: 2800,
       //disabled: true,
-      onClick: () => { },
+      onClick: () => {
+        setProblemDialog({ problemGroupId: 21 })
+      },
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 09.png',
@@ -79,7 +99,9 @@ const Finio1 = () => {
       x: 2350,
       y: 3600,
       //disabled: true,
-      onClick: () => { },
+      onClick: () => {
+        setProblemDialog({ problemGroupId: 12 })
+      },
     },
   ];
 

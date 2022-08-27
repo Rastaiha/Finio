@@ -10,7 +10,7 @@ const Finio2 = () => {
   const backgroundImageSrc = '/Finio2/Background.png';
   const items: ItemType[] = [
     {
-      imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest.png',
+      imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest 03.png',
       id: "0",
       scale: 0.15,
       x: 8000,
@@ -18,7 +18,7 @@ const Finio2 = () => {
       onClick: () => { },
     },
     {
-        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest.png',
+        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest 02.png',
         id: "0",
         scale: 0.15,
         x: 8000,
@@ -26,7 +26,7 @@ const Finio2 = () => {
         onClick: () => { },
       },
       {
-        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest.png',
+        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest 01.png',
         id: "0",
         scale: 0.15,
         x: 8000,
@@ -34,7 +34,7 @@ const Finio2 = () => {
         onClick: () => { },
       },
       {
-        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest.png',
+        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest 04.png',
         id: "0",
         scale: 0.15,
         x: 7000,
@@ -42,7 +42,7 @@ const Finio2 = () => {
         onClick: () => { },
       },
       {
-        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest.png',
+        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest 05.png',
         id: "0",
         scale: 0.15,
         x: 7000,
@@ -50,7 +50,7 @@ const Finio2 = () => {
         onClick: () => { },
       },
       {
-        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest.png',
+        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest 06.png',
         id: "0",
         scale: 0.15,
         x: 7000,
@@ -58,7 +58,7 @@ const Finio2 = () => {
         onClick: () => { },
       },
       {
-        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest.png',
+        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest 09.png',
         id: "0",
         scale: 0.15,
         x: 6000,
@@ -66,7 +66,7 @@ const Finio2 = () => {
         onClick: () => { },
       },
       {
-        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest.png',
+        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest 08.png',
         id: "0",
         scale: 0.15,
         x: 6000,
@@ -74,7 +74,7 @@ const Finio2 = () => {
         onClick: () => { },
       },
       {
-        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest.png',
+        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest 07.png',
         id: "0",
         scale: 0.15,
         x: 6000,
@@ -82,7 +82,7 @@ const Finio2 = () => {
         onClick: () => { },
       },
       {
-        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest.png',
+        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest 10.png',
         id: "0",
         scale: 0.15,
         x: 5000,
@@ -90,7 +90,7 @@ const Finio2 = () => {
         onClick: () => { },
       },
       {
-        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest.png',
+        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest 11.png',
         id: "0",
         scale: 0.15,
         x: 5000,
@@ -98,7 +98,7 @@ const Finio2 = () => {
         onClick: () => { },
       },
       {
-        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest.png',
+        imageSrc: process.env.PUBLIC_URL + '/Finio2/Chest 12.png',
         id: "0",
         scale: 0.15,
         x: 5000,
