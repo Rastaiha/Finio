@@ -1,6 +1,6 @@
 import { Container } from '@mui/material';
 import React from 'react';
-import AppBar from '../components/Appbar/ResponsiveAppBar';
+import AppBar from '../Appbar/ResponsiveAppBar';
 
 const Layout = ({
   ...props

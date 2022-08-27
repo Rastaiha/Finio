@@ -11,8 +11,8 @@ import URLImage from '../../components/Konva/URLImage';
 import {
   getAllFamousPersonsAction,
 } from '../../redux/slices/game';
-import Layout from '../Layout';
-import ItemImage from '../../pages/Rooms/Item';
+import Layout from '../../components/organism/Layout';
+import ItemImage from '../../components/molecules/konva/Item';
 
 const useStyles = makeStyles(() => ({
   fullHeight: {

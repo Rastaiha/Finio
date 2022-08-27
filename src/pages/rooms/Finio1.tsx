@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { ItemType } from '../../types/global';
-import RoomBase from './RoomTemplate';
+import RoomBase from '../../components/organism/konva/RoomBase';
 import { useNavigate } from 'react-router-dom';
 import Finio2 from './Finio2';
 import {
@@ -8,7 +8,10 @@ import {
 } from '../../redux/slices/problem';
 import { connect } from 'react-redux';
 
-const Finio1 = () => {
+const Finio1 = ({
+  setProblemDialog,
+}) => {
+  const navigate = useNavigate();
   const backgroundImageSrc = '/Finio1/Background.png';
   const items: ItemType[] = [
     {
@@ -17,7 +20,10 @@ const Finio1 = () => {
       scale: 0.15,
       x: 7800,
       y: 3550,
-      onClick: () => { },
+      disabled: true,
+      onClick: () => {
+
+      },
       // must gamble money
     },
     {
@@ -66,9 +72,10 @@ const Finio1 = () => {
       scale: 0.15,
       x: 2000,
       y: 3900,
-      //disabled: true,
-      onClick: () => { },
-      // must go to room finio 2
+      disabled: true,
+      onClick: () => {
+        navigate('/room/finio2/')
+      },
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 02.png',
@@ -76,7 +83,6 @@ const Finio1 = () => {
       scale: 0.15,
       x: 1500,
       y: 2800,
-      //disabled: true,
       onClick: () => {
         setProblemDialog({ problemGroupId: 19 })
       },
@@ -87,7 +93,6 @@ const Finio1 = () => {
       scale: 0.15,
       x: 4800,
       y: 2800,
-      //disabled: true,
       onClick: () => {
         setProblemDialog({ problemGroupId: 21 })
       },
@@ -98,7 +103,6 @@ const Finio1 = () => {
       scale: 0.15,
       x: 2350,
       y: 3600,
-      //disabled: true,
       onClick: () => {
         setProblemDialog({ problemGroupId: 12 })
       },
@@ -110,4 +114,6 @@ const Finio1 = () => {
   );
 };
 
-export default Finio1;
+export default connect(null, {
+  setProblemDialog: setProblemDialogAction,
+})(Finio1);

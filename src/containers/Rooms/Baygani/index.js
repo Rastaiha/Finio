@@ -9,7 +9,7 @@ import {
   getAllCheckableObjectsAction,
   getPlayerCheckableObjectsAction,
 } from '../../../redux/slices/game';
-import Layout from '../../Layout';
+import Layout from '../../../components/organism/Layout';
 import MessageSeries from '../Baygani/MessageSeries';
 
 const useStyles = makeStyles((theme) => ({

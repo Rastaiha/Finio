@@ -5,8 +5,8 @@ import useImage from 'use-image';
 
 import GetProblem from '../../components/Dialog/GetProblem'
 import URLImage from '../../components/Konva/URLImage';
-import Layout from '../Layout';
-import ItemImage from '../../pages/Rooms/Item';
+import Layout from '../../components/organism/Layout';
+import ItemImage from '../../components/molecules/konva/Item';
 
 const Index = () => {
   let navigate = useNavigate();

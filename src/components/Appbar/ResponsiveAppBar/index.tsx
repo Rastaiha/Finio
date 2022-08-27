@@ -17,38 +17,21 @@ import modes from './modes';
 import useWidth from '../../../utils/UseWidth';
 
 type AppbarPropsType = {
-  isMentor: boolean;
-  getOneEventInfo: any;
-  workshop: any;
-  event: any;
   mode: string;
-  showBackOnScroll: boolean;
-  hideOnScroll: boolean;
-  position: "fixed" | "absolute" | "sticky" | "static" | "relative";
-  mentorId: string;
+  showBackOnScroll?: boolean;
+  hideOnScroll?: boolean;
+  position?: "fixed" | "absolute" | "sticky" | "static" | "relative";
 }
 
 const ResponsiveAppBar: FC<AppbarPropsType> = ({
-  isMentor,
-  getOneEventInfo,
-  workshop,
-  event,
   mode = 'WORKSHOP',
   showBackOnScroll = true,
   hideOnScroll = false,
   position = 'fixed',
-  mentorId,
 }) => {
-  const { eventId } = useParams();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 30 });
   const width = useWidth();
-
-  useEffect(() => {
-    if (eventId) {
-      getOneEventInfo({ eventId });
-    }
-  }, [eventId])
 
   const {
     desktopLeftItems,
@@ -56,7 +39,7 @@ const ResponsiveAppBar: FC<AppbarPropsType> = ({
     mobileLeftItems,
     mobileRightItems,
     mobileMenuListItems,
-  } = modes[mode]({ workshop, event, isMentor, mentorId });
+  } = modes[mode]();
 
   const rightItems = width === 'xs' ? mobileRightItems : desktopRightItems;
   const leftItems = width === 'xs' ? mobileLeftItems : desktopLeftItems;

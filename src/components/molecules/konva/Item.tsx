@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { Image } from 'react-konva';
 import useImage from 'use-image';
-import { ItemType } from '../../types/global';
+import { ItemType } from '../../../types/global';
 
 type ItemPropsType = {
   data: ItemType;
@@ -29,8 +29,8 @@ const Item: FC<ItemPropsType> = ({
       x={data.x * scale}
       y={data.y * scale}
       opacity={1}
-      scaleX={(hover && !data.disabled) ? scale + 0.05 : scale}
-      scaleY={(hover && !data.disabled) ? scale + 0.05 : scale}
+      scaleX={(hover && !data.disabled) ? scale + 0.03 : scale}
+      scaleY={(hover && !data.disabled) ? scale + 0.03 : scale}
 
       onTap={(e) => {
         setHover(true);
@@ -41,8 +41,16 @@ const Item: FC<ItemPropsType> = ({
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
 
-      onDblTap={data.onClick}
-      onClick={data.onClick}
+      onDblTap={() => {
+        if (!data.disabled) {
+          data.onClick();
+        }
+      }}
+      onClick={() => {
+        if (!data.disabled) {
+          data.onClick();
+        }
+      }}
     />
   )
 }

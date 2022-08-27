@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import useImage from 'use-image';
 
 import URLImage from '../../components/Konva/URLImage';
-import Layout from '../Layout';
-import ItemImage from '../../pages/Rooms/Item';
+import Layout from '../../components/organism/Layout';
+import ItemImage from '../../components/molecules/konva/Item';
 import GetProblem from '../../components/Dialog/GetProblem'
 
 const useStyles = makeStyles(() => ({

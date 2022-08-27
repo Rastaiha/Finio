@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
 import { ItemType } from '../../types/global';
-import RoomBase from './RoomTemplate';
+import RoomBase from '../../components/organism/konva/RoomBase';
 import { useNavigate } from 'react-router-dom';
+import { setProblemDialogAction } from '../../redux/slices/problem';
+import { connect } from 'react-redux';
 
 const Doors = () => {
   const navigate = useNavigate();
@@ -64,4 +66,6 @@ const Doors = () => {
   );
 };
 
-export default Doors;
+export default connect(null, {
+  setProblemDialog: setProblemDialogAction,
+})(Doors);

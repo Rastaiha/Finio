@@ -1,12 +1,14 @@
 import React, { FC } from 'react';
 import { ItemType } from '../../types/global';
-import RoomBase from './RoomTemplate';
+import RoomBase from '../../components/organism/konva/RoomBase';
 import {
   setProblemDialogAction,
 } from '../../redux/slices/problem';
 import { connect } from 'react-redux';
 
-const Hoosh = () => {
+const Hoosh = ({
+  setProblemDialog,
+}) => {
   const backgroundImageSrc = '/Hoosh/Hooch1.png';
   const items: ItemType[] = [
     {
@@ -83,4 +85,6 @@ const Hoosh = () => {
   );
 };
 
-export default Hoosh;
+export default connect(null, {
+  setProblemDialog: setProblemDialogAction,
+})(Hoosh);

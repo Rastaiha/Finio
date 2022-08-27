@@ -4,9 +4,9 @@ import {
 } from '@mui/material';
 import { Layer, Stage } from 'react-konva';
 import useImage from 'use-image';
-import URLImage from '../../components/Konva/URLImage';
-import Item from './Item';
-import { ItemType } from '../../types/global';
+import URLImage from '../../Konva/URLImage';
+import Item from '../../molecules/konva/Item';
+import { ItemType } from '../../../types/global';
 
 type RoomPropsType = {
   items: ItemType[];

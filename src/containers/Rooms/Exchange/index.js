@@ -2,7 +2,7 @@ import { Button, ButtonGroup, Container, Grid, Paper } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 import React from 'react';
 
-import Layout from '../../Layout';
+import Layout from '../../../components/organism/Layout';
 import AllExchanges from './AllExchanges';
 import CreateNewExchange from './CreateNewExchange';
 import PlayerExchanges from './PlayerExchanges';
