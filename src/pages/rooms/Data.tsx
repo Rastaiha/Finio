@@ -97,7 +97,9 @@ const Data = ({
       scale: 0.7,
       x: 430,
       y: 1000,
+      disabled: true,
       onClick: () => {
+        // TODO IMAN
         // setProblemDialog({ problemGroupId:  })
       },
     },

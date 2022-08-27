@@ -22,9 +22,8 @@ const Finio1 = ({
       y: 3550,
       disabled: true,
       onClick: () => {
-
+        // must gamble money
       },
-      // must gamble money
     },
     {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 03.png',
