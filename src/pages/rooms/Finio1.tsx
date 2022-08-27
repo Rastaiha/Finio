@@ -17,39 +17,39 @@ const Finio1 = ({
     {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 05.png',
       id: "0",
-      scale: 0.15,
-      x: 7800,
-      y: 3550,
+      scale: 1,
+      x: 6550,
+      y: 2950,
       disabled: true,
       onClick: () => {
         // must gamble money
       },
     },
     {
+      imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 08.png',
+      id: "3",
+      scale: 1,
+      x: 5850,
+      y: 2700 ,
+      onClick: () => {
+        setProblemDialog({ problemGroupId: 15 })
+      },
+    },
+    {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 03.png',
       id: "1",
-      scale: 0.15,
-      x: 1480,
+      scale: 1,
+      x: 1100,
       y: 1550,
       onClick: () => {
         setProblemDialog({ problemGroupId: 13 })
       },
     },
     {
-      imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 08.png',
-      id: "3",
-      scale: 0.15,
-      x: 7000,
-      y: 3250,
-      onClick: () => {
-        setProblemDialog({ problemGroupId: 15 })
-      },
-    },
-    {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 07.png',
       id: "4",
-      scale: 0.15,
-      x: 8250,
+      scale: 0.7,
+      x: 7000,
       y: 1500,
       onClick: () => {
         setProblemDialog({ problemGroupId: 16 })
@@ -68,9 +68,9 @@ const Finio1 = ({
     {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 04.png',
       id: "6",
-      scale: 0.15,
-      x: 2000,
-      y: 3900,
+      scale: 1,
+      x: 1800,
+      y: 3500,
       disabled: true,
       onClick: () => {
         navigate('/room/finio2/')
@@ -79,7 +79,7 @@ const Finio1 = ({
     {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 02.png',
       id: "7",
-      scale: 0.15,
+      scale: 1,
       x: 1500,
       y: 2800,
       onClick: () => {
@@ -89,9 +89,9 @@ const Finio1 = ({
     {
       imageSrc: process.env.PUBLIC_URL + '/Finio1/Asset 01.png',
       id: "7",
-      scale: 0.15,
-      x: 4800,
-      y: 2800,
+      scale: 1,
+      x: 4050,
+      y: 2200,
       onClick: () => {
         setProblemDialog({ problemGroupId: 21 })
       },
